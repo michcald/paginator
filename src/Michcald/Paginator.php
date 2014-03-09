@@ -10,11 +10,6 @@ class Paginator
     
     private $currentPageNumber = 1;
     
-    public function __construct()
-    {
-        
-    }
-    
     public function setTotalItems($totalItems)
     {
         $this->totalItems = $totalItems;
@@ -45,14 +40,6 @@ class Paginator
     
     public function setCurrentPageNumber($page)
     {
-        if($page < 1) {
-            $page = 1;
-        }
-        
-        if($page > $this->getNumberOfPages()) {
-            $page = $this->getNumberOfPages();
-        }
-        
         $this->currentPageNumber = $page;
         
         return $this;
