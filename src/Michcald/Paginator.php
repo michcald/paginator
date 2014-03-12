@@ -40,6 +40,8 @@ class Paginator
     
     public function setCurrentPageNumber($page)
     {
+        $page = abs((int)$page);
+        
         $this->currentPageNumber = $page;
         
         return $this;
